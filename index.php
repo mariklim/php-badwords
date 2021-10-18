@@ -12,29 +12,28 @@ Non sono domande a cui è facile dare una risposta perché le origini della pizz
 Perfetta da gustare in ogni momento della giornata, da gradire con calma in una serata con gli amici e comoda da mangiare se si ha poco tempo a disposizione, così versatile e squisita nella sua semplicità da andare incontro a tutti i gusti, quando e come è nata veramente la prima pizza?";
 ?>
 
+<form action="index.php" method="get">
+Inserisci la parola da censurare: <input type="text" name='parola'>
+<input type="submit">
+</form>
 
 <!-- la nuova parola passata tramite Get -->
 <?php $parolaUtente = $_GET['parola']?>
 
 <!-- Visualizazzione: -->
 
-<h2>Il testo:</h2>
+<h2>Il testo originale:</h2>
 
 <!-- stampo paragrafo originale e la lunghezza -->
 <p>
     <?php echo $testo ?>
 </p>
-<h3>La lunghezza del testo:</h3>
+<h3>La lunghezza del testo originale:</h3>
 <p>
     <?php echo strlen($testo); ?>
     caratteri
 </p>
 
-
-<h3>La parola dell'utente:</h3>
-<p>
-    <?php echo $parolaUtente; ?>
-</p>
 
 <!-- Stampo il testo censurato -->
 
@@ -46,7 +45,7 @@ Perfetta da gustare in ogni momento della giornata, da gradire con calma in una 
     <?php echo $testoCensurato?>
 </p>
 
-<h3>La lunghezza del testo:</h3>
+<h3>La lunghezza del testo censurato:</h3>
 <p>
     <?php echo strlen($testoCensurato); ?>
     caratteri
